@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".pageTwo" />
-        <activity android:name=".pageThree"></activity>
+        <activity android:name=".pageThree" />
+        <activity android:name=".pageFour"></activity>
     </application>
 
 </manifest>

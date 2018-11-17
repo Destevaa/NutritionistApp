@@ -29,4 +29,20 @@ public class pageTwo extends AppCompatActivity {
     }
 
 
+    public void page4(View v)
+    {
+
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.buttonFour)
+        {
+            i = new Intent(this,pageFour.class);
+            startActivity(i);
+        }
+
+    }
+
+
 }

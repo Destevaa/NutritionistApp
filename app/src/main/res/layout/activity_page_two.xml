@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonFour"
         style="@style/buttonOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,6 +37,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="page4"
         android:text="DIET PLANNER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
