@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".pageTwo" />
         <activity android:name=".pageThree" />
-        <activity android:name=".pageFour"></activity>
+        <activity android:name=".pageFour" />
+        <activity android:name=".UserRegistration" android:noHistory="true"></activity>
     </application>
 
 </manifest>
