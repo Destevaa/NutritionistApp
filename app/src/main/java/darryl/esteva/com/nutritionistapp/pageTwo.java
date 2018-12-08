@@ -28,22 +28,12 @@ public class pageTwo extends AppCompatActivity {
         myDb = new DatabaseHelper(this);
     }
 
+    
+
     public void page3(View v)
     {
 
-       /*Cursor mCursor = myDb.rawQuery("SELECT * FROM USERTABLE" , null);
-        Boolean rowExists;
 
-        if (mCursor.moveToFirst())
-        {
-            // DO SOMETHING WITH CURSOR
-            rowExists = true;
-
-        } else
-        {
-            // I AM EMPTY
-            rowExists = false;
-        }*/
 
         Cursor res = myDb.getAllData();
         if(res.getCount() == 0)
@@ -116,14 +106,14 @@ public class pageTwo extends AppCompatActivity {
 
     }
 
-    public void showMessage(String title, String Message){
+    /*public void showMessage(String title, String Message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
 
-    }
+    }*/
 
 
     public void page4(View v)

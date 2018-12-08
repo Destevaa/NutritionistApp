@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class pageThree extends AppCompatActivity {
 
+    DatabaseHelper myDb;
 
     EditText height, weight;
     TextView result;
@@ -39,6 +41,8 @@ public class pageThree extends AppCompatActivity {
         });
 
 
+        myDb = new DatabaseHelper(this);
+
     }
 
 
@@ -53,13 +57,67 @@ public class pageThree extends AppCompatActivity {
             float weightValue = Float.parseFloat(weightStr);
 
 
-            float bmi = weightValue / heightValue / heightValue;
 
+            final float bmi = weightValue / heightValue / heightValue;
+
+            float number = bmi;
+            Float floatInstance = new Float(number);
+            final String numberAsString = floatInstance.toString();
 
             displayBMI(bmi);
+
+
+            boolean isUpdate = myDb.updateData("1", numberAsString
+            );
+
+            if(isUpdate == true)
+            {
+                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
+            }
+                            }
+
+
+
+
+
+
+            //UPDATE BMI CODE
+            /*calculate.setOnClickListener(
+                                new View.OnClickListener(){
+                                    @Override
+                                    public void onClick(View v)
+                                    {
+
+                            boolean isUpdate = myDb.updateData("1", "123"
+                            );
+
+                            if(isUpdate == true)
+                            {
+                                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
+                            }
+
+                            else
+                            {
+                                Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
+                            }
+
+
+                        }
+                    }
+
+            );*/
+
+            //END
+
         }
 
-    }
+
+
+
 
     private void displayBMI(float bmi)
     {
@@ -110,6 +168,35 @@ public class pageThree extends AppCompatActivity {
         result.setText(bmiLabel);
 
     }
+
+    /*public void updateData()
+    {
+        btnviewUpdate.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v)
+                    {
+                        boolean isUpdate = myDb.updateData("1", editName.getText().toString(),
+                                editUsername.getText().toString(), editBmi.getText().toString()
+
+                        );
+
+                        if(isUpdate == true)
+                        {
+                            Toast.makeText(UserRegistration.this, "Data Updated", Toast.LENGTH_LONG).show();
+                        }
+
+                        else
+                        {
+                            Toast.makeText(UserRegistration.this, "Data not Updated", Toast.LENGTH_LONG).show();
+                        }
+
+
+                    }
+                }
+
+        );
+    }*/
 
 
 

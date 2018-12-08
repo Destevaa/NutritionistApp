@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,7 +49,7 @@ public class UserRegistration extends AppCompatActivity {
 
         AddData();
         viewAll();
-        updateData();
+        //updateData();
         DeleteData();
 
 
@@ -77,14 +78,14 @@ public class UserRegistration extends AppCompatActivity {
         );
     }
 
-    public void updateData()
-    {
+    /*public void updateData()
+        {
         btnviewUpdate.setOnClickListener(
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View v)
                     {
-                        boolean isUpdate = myDb.updateData(editTextId.getText().toString(), editName.getText().toString(),
+                        boolean isUpdate = myDb.updateData("1", editName.getText().toString(),
                                 editUsername.getText().toString(), editBmi.getText().toString()
 
                         );
@@ -104,45 +105,81 @@ public class UserRegistration extends AppCompatActivity {
                 }
 
         );
-    }
+    }*/
 
 
     public void AddData()
     {
-        btnAddData.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v)
-                    {
-                        boolean isInserted = myDb.insertData(
-                                editName.getText().toString(),
-                                editUsername.getText().toString(),
-                                "0"
 
-                        );
 
-                        if(isInserted == true)
+            btnAddData.setOnClickListener(
+                    new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v)
                         {
-                            Toast.makeText(UserRegistration.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                            //editTextBmiValue.setText(editBmi);
+                            if( TextUtils.isEmpty(editName.getText())){
+                                /**
+                                 *   You can Toast a message here that the Username is Empty
+                                 **/
+                                Toast.makeText(UserRegistration.this, "Name is empty", Toast.LENGTH_LONG).show();
 
-                            pageRedirect(v);
+                                editName.setError( "First name is required!" );
 
+                            }
+
+                            else if ( TextUtils.isEmpty(editUsername.getText())){
+                                /**
+                                 *   You can Toast a message here that the Username is Empty
+                                 **/
+                                Toast.makeText(UserRegistration.this, "Username is empty", Toast.LENGTH_LONG).show();
+
+                                editUsername.setError( "User name is required!" );
+
+                            }
+
+
+
+
+                            else
+                            {
+                                boolean isInserted = myDb.insertData(
+                                        editName.getText().toString(),
+                                        editUsername.getText().toString(),
+                                        "0"
+
+                                );
+
+                                if(isInserted == true)
+                                {
+
+
+                                    Toast.makeText(UserRegistration.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                                    //editTextBmiValue.setText(editBmi);
+
+                                    pageRedirect(v);
+
+
+
+
+
+
+                                }
+
+                                else
+                                {
+                                    Toast.makeText(UserRegistration.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                                }
+                            }
 
 
 
                         }
-
-                        else
-                        {
-                            Toast.makeText(UserRegistration.this, "Data not Inserted", Toast.LENGTH_LONG).show();
-                        }
-
                     }
-                }
 
 
-        );
+            );
+
+
 
 
     }

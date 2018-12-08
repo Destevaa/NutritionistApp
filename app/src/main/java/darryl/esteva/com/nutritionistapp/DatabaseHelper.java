@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     }
 
-    public boolean updateData(String id, String name, String username, String bmi){
+    /*public boolean updateData(String id, String name, String username, String bmi){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -75,6 +75,29 @@ public class DatabaseHelper extends SQLiteOpenHelper
         contentValues.put(COL_4, bmi);
 //        db.update(TABLE_NAME, contentValues, "id = ?", new String[] { id } );
 //        return true;
+
+        int result = db.update(TABLE_NAME, contentValues, "ID = ?", new String[] { id });
+
+        if (result == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
+
+    }*/
+
+    public boolean updateData(String id, String bmi){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COL_1, id);
+        contentValues.put(COL_4, bmi);
+
 
         int result = db.update(TABLE_NAME, contentValues, "ID = ?", new String[] { id });
 
