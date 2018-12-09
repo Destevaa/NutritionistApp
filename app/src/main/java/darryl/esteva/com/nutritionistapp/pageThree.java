@@ -13,7 +13,7 @@ public class pageThree extends AppCompatActivity {
 
     DatabaseHelper myDb;
 
-    EditText height, weight;
+    EditText height, weight, feet, inches;
     TextView result;
     Button calculate;
 
@@ -26,10 +26,15 @@ public class pageThree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_three);
 
-        height = (EditText) findViewById(R.id.height);
+
         weight = (EditText) findViewById(R.id.weight);
         result = (TextView) findViewById(R.id.result);
         calculate = (Button) findViewById(R.id.calculate);
+
+        feet = (EditText) findViewById(R.id.feetEditText);
+        inches = (EditText) findViewById(R.id.inchesEditText);
+
+
 
         calculate.setOnClickListener(new View.OnClickListener()
         {
@@ -46,8 +51,11 @@ public class pageThree extends AppCompatActivity {
     }
 
 
-    private void calculateBMI()
+    /*private void calculateBMI()
     {
+        String feetStr = feet.getText().toString();
+        String inchesStr = inches.getText().toString();
+
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
 
@@ -78,9 +86,53 @@ public class pageThree extends AppCompatActivity {
             {
                 Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
             }
-                            }
+        }
+    }*/
+    private void calculateBMI()
+    {
+        String feetStr = feet.getText().toString();
+        String inchesStr = inches.getText().toString();
+
+        //String heightStr = height.getText().toString();
+        String weightStr = weight.getText().toString();
+
+        if(feetStr != null && !"".equals(feetStr) && inchesStr != null && !"".equals(inchesStr) && weightStr != null && !"".equals(weightStr))
+        {
+            double feetValue = Double.parseDouble(feetStr);
+            double inchesValue = Double.parseDouble(inchesStr);
+
+            //float heightValue = Float.parseFloat(heightStr);
+            double weightValue = Double.parseDouble(weightStr);
+
+            double feetValueToMeter =  feetValue / 3.2808;
+
+            double inchesValueToMeter =  inchesValue / 39.37;
+
+            double feetAndInchesConvertedToMeter = feetValueToMeter + inchesValueToMeter;
+
+            final double bmi = weightValue / feetAndInchesConvertedToMeter / feetAndInchesConvertedToMeter;
 
 
+            double number = bmi;
+            Double aDoubleInstance = new Double(number);
+            final String numberAsString = aDoubleInstance.toString();
+
+            displayBMI(bmi);
+
+
+            boolean isUpdate = myDb.updateData("1", numberAsString
+            );
+
+            if(isUpdate == true)
+            {
+                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
 
 
 
@@ -113,48 +165,48 @@ public class pageThree extends AppCompatActivity {
 
             //END
 
-        }
 
 
 
 
 
-    private void displayBMI(float bmi)
+
+    private void displayBMI(double bmi)
     {
         String bmiLabel = "";
 
-        if(Float.compare(bmi, 15f) <=0)
+        if(Double.compare(bmi, 15) <=0)
         {
             bmiLabel = "Very Severely Underweight";
         }
 
-        else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <=0)
+        else if(Double.compare(bmi, 15) > 0 && Double.compare(bmi, 16) <=0)
         {
             bmiLabel = "severely underweight";
 
         }
 
-        else if(Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <=0)
+        else if(Double.compare(bmi, 16) > 0 && Double.compare(bmi, 18.5) <=0)
         {
             bmiLabel = "underweight";
         }
 
-        else if(Float.compare(bmi, 18.5f) > 0  && Float.compare(bmi, 25f) <=0)
+        else if(Double.compare(bmi, 18.5) > 0  && Double.compare(bmi, 25) <=0)
         {
             bmiLabel = "normal";
         }
 
-        else if(Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <=0)
+        else if(Double.compare(bmi, 25) > 0 && Double.compare(bmi, 30) <=0)
         {
             bmiLabel = "overweight";
         }
 
-        else if(Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <=0)
+        else if(Double.compare(bmi, 30) > 0 && Double.compare(bmi, 35) <=0)
         {
             bmiLabel = "Obese class I";
         }
 
-        else if(Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <=0)
+        else if(Double.compare(bmi, 35) > 0 && Double.compare(bmi, 40) <=0)
         {
             bmiLabel = "Obese class II";
         }
