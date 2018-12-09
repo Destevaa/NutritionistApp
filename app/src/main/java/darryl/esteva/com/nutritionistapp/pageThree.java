@@ -51,43 +51,6 @@ public class pageThree extends AppCompatActivity {
     }
 
 
-    /*private void calculateBMI()
-    {
-        String feetStr = feet.getText().toString();
-        String inchesStr = inches.getText().toString();
-
-        String heightStr = height.getText().toString();
-        String weightStr = weight.getText().toString();
-
-        if(heightStr != null && !"".equals(heightStr) && weightStr != null && !"".equals(weightStr))
-        {
-            float heightValue = Float.parseFloat(heightStr);
-            float weightValue = Float.parseFloat(weightStr);
-
-
-
-            final float bmi = weightValue / heightValue / heightValue;
-
-            float number = bmi;
-            Float floatInstance = new Float(number);
-            final String numberAsString = floatInstance.toString();
-
-            displayBMI(bmi);
-
-
-            boolean isUpdate = myDb.updateData("1", numberAsString
-            );
-
-            if(isUpdate == true)
-            {
-                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
-            }
-            else
-            {
-                Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
-            }
-        }
-    }*/
     private void calculateBMI()
     {
         String feetStr = feet.getText().toString();
@@ -101,7 +64,7 @@ public class pageThree extends AppCompatActivity {
             double feetValue = Double.parseDouble(feetStr);
             double inchesValue = Double.parseDouble(inchesStr);
 
-            //float heightValue = Float.parseFloat(heightStr);
+
             double weightValue = Double.parseDouble(weightStr);
 
             double feetValueToMeter =  feetValue / 3.2808;
@@ -137,33 +100,6 @@ public class pageThree extends AppCompatActivity {
 
 
 
-            //UPDATE BMI CODE
-            /*calculate.setOnClickListener(
-                                new View.OnClickListener(){
-                                    @Override
-                                    public void onClick(View v)
-                                    {
-
-                            boolean isUpdate = myDb.updateData("1", "123"
-                            );
-
-                            if(isUpdate == true)
-                            {
-                                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
-                            }
-
-                            else
-                            {
-                                Toast.makeText(pageThree.this, "Data not Updated", Toast.LENGTH_LONG).show();
-                            }
-
-
-                        }
-                    }
-
-            );*/
-
-            //END
 
 
 
@@ -221,34 +157,7 @@ public class pageThree extends AppCompatActivity {
 
     }
 
-    /*public void updateData()
-    {
-        btnviewUpdate.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v)
-                    {
-                        boolean isUpdate = myDb.updateData("1", editName.getText().toString(),
-                                editUsername.getText().toString(), editBmi.getText().toString()
 
-                        );
-
-                        if(isUpdate == true)
-                        {
-                            Toast.makeText(UserRegistration.this, "Data Updated", Toast.LENGTH_LONG).show();
-                        }
-
-                        else
-                        {
-                            Toast.makeText(UserRegistration.this, "Data not Updated", Toast.LENGTH_LONG).show();
-                        }
-
-
-                    }
-                }
-
-        );
-    }*/
 
 
 
