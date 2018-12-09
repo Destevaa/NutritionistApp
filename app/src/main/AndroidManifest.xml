@@ -31,7 +31,21 @@
         <activity android:name=".thursdayUnderweight" />
         <activity android:name=".fridayUnderweight" />
         <activity android:name=".sundayUnderweight" />
-        <activity android:name=".saturdayUnderweight"></activity>
+        <activity android:name=".saturdayUnderweight" />
+        <activity android:name=".mondayOverweight" />
+        <activity android:name=".tuesdayOverweight" />
+        <activity android:name=".wednesdayOverweight" />
+        <activity android:name=".thursdayOverweight" />
+        <activity android:name=".fridayOverweight" />
+        <activity android:name=".saturdayOverweight" />
+        <activity android:name=".sundayOverweight" />
+        <activity android:name=".mondayNormalweight" />
+        <activity android:name=".tuesdayNormalweight" />
+        <activity android:name=".wednesdayNormalweight" />
+        <activity android:name=".thursdayNormalweight" />
+        <activity android:name=".fridayNormalweight" />
+        <activity android:name=".saturdayNormalweight" />
+        <activity android:name=".sundayNormalweight"></activity>
     </application>
 
 </manifest>
