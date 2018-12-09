@@ -17,7 +17,7 @@ public class pageFour extends AppCompatActivity {
 
 
     TextView bmiTextView;
-
+    Button forUnderweight, forNormalweight, forOverweight;
 
 
     @Override
@@ -27,8 +27,9 @@ public class pageFour extends AppCompatActivity {
 
         myDb = new DatabaseHelper(this);
         bmiTextView = (TextView) findViewById(R.id.bmiTextView);
-
-
+        forUnderweight = (Button)findViewById(R.id.underweightButton);
+        forNormalweight = (Button)findViewById(R.id.normalweightButton);
+        forOverweight = (Button)findViewById(R.id.overweightButton);
 
         showUserBMI();
 
@@ -56,12 +57,95 @@ public class pageFour extends AppCompatActivity {
 
             else
             {
-                bmiTextView.setText("YOUR BMI IS: " + bmiOutput);
+
+
+
+
+                String bmiLabel = "";
+                //very severely underweight
+                if(Double.compare(bmiOutput, 15) <=0) {
+                    forUnderweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "Very Severely Underweight";
+                }
+                //severely underweight
+                else if(Double.compare(bmiOutput, 15) > 0 && Double.compare(bmiOutput, 16) <=0) {
+                    forUnderweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "severely underweight";
+                }
+                //underweight
+                else if(Double.compare(bmiOutput, 16) > 0 && Double.compare(bmiOutput, 18.5) <=0) {
+                    forUnderweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "underweight";
+                }
+
+                //normal weight
+                else if(Double.compare(bmiOutput, 18.5) > 0  && Double.compare(bmiOutput, 25) <=0) {
+                    forNormalweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "normal";
+                }
+
+                else if(Double.compare(bmiOutput, 25) > 0 && Double.compare(bmiOutput, 30) <=0)
+                {
+                    forOverweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "overweight";
+                }
+
+                else if(Double.compare(bmiOutput, 30) > 0 && Double.compare(bmiOutput, 35) <=0)
+                {
+                    forOverweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "Obese class I";
+                }
+
+                else if(Double.compare(bmiOutput, 35) > 0 && Double.compare(bmiOutput, 40) <=0)
+                {
+                    forOverweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "Obese class II";
+                }
+
+                else
+                {
+                    forOverweight.setVisibility(View.VISIBLE);
+                    bmiLabel = "Obese class III";
+                }
+
+
+                bmiTextView.setText("YOUR BMI IS: " + bmiOutput + "\nYou are " + bmiLabel);
             }
 
 
 
-        }
+
+
+            /*//very severely underweight
+            if(Double.compare(bmiOutput, 15) <=0) {
+                forUnderweight.setVisibility(View.VISIBLE);
+            }
+            //severely underweight
+            else if(Double.compare(bmiOutput, 15) > 0 && Double.compare(bmiOutput, 16) <=0) {
+                forUnderweight.setVisibility(View.VISIBLE);
+            }
+            //underweight
+            else if(Double.compare(bmiOutput, 16) > 0 && Double.compare(bmiOutput, 18.5) <=0) {
+                forUnderweight.setVisibility(View.VISIBLE);
+            }
+
+            //normal weight
+            else if(Double.compare(bmiOutput, 18.5) > 0  && Double.compare(bmiOutput, 25) <=0) {
+                forNormalweight.setVisibility(View.VISIBLE);
+            }
+
+
+
+            else
+            {
+                forOverweight.setVisibility(View.VISIBLE);
+            }*/
+
+
+
+
+
+    }
 
 
 
