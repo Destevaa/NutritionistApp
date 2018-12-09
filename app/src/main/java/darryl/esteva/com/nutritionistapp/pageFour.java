@@ -1,5 +1,6 @@
 package darryl.esteva.com.nutritionistapp;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -93,24 +94,31 @@ public class pageFour extends AppCompatActivity {
                 else if(Double.compare(bmiOutput, 30) > 0 && Double.compare(bmiOutput, 35) <=0)
                 {
                     forOverweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "Obese class I";
+                    bmiLabel = "Obese I";
                 }
 
                 else if(Double.compare(bmiOutput, 35) > 0 && Double.compare(bmiOutput, 40) <=0)
                 {
                     forOverweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "Obese class II";
+                    bmiLabel = "Obese II";
                 }
 
                 else
                 {
                     forOverweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "Obese class III";
+                    bmiLabel = "Obese III";
                 }
 
 
-                bmiTextView.setText("YOUR BMI IS: " + bmiOutput + "\nYou are " + bmiLabel);
+                bmiTextView.setText("YOUR BMI IS: " + bmiOutput + "\nYou are in the " + bmiLabel + " class");
             }
+
+
+
+
+
+
+
 
 
 
@@ -150,6 +158,52 @@ public class pageFour extends AppCompatActivity {
 
 
 
+
+    }
+
+    public void underweightPlanCall(View v)
+    {
+
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.underweightButton)
+        {
+            i = new Intent(this,underweightPlan.class);
+            startActivity(i);
+        }
+
+    }
+
+    public void normalweightPlanCall(View v)
+    {
+
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.normalweightButton)
+        {
+            i = new Intent(this,normalweightPlan.class);
+            startActivity(i);
+        }
+
+    }
+
+
+    public void overweightPlanCall(View v)
+    {
+
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.overweightButton)
+        {
+            i = new Intent(this,overweightPlan.class);
+            startActivity(i);
+        }
 
     }
 
