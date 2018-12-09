@@ -65,6 +65,15 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     }
 
+    public Cursor getDataOnID()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int GetID = 1;
+        Cursor res = db.rawQuery("Select * from USERTABLE where ID=" + GetID + "", null);
+        return res;
+
+    }
+
     /*public boolean updateData(String id, String name, String username, String bmi){
         SQLiteDatabase db = this.getWritableDatabase();
 
