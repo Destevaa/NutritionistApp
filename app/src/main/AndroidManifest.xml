@@ -24,7 +24,14 @@
             android:noHistory="true" />
         <activity android:name=".underweightPlan" />
         <activity android:name=".normalweightPlan" />
-        <activity android:name=".overweightPlan"></activity>
+        <activity android:name=".overweightPlan" />
+        <activity android:name=".mondayUnderweight" />
+        <activity android:name=".tuesdayUnderweight" />
+        <activity android:name=".wednesdayUnderweight" />
+        <activity android:name=".thursdayUnderweight" />
+        <activity android:name=".fridayUnderweight" />
+        <activity android:name=".sundayUnderweight" />
+        <activity android:name=".saturdayUnderweight"></activity>
     </application>
 
 </manifest>

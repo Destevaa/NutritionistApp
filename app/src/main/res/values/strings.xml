@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NutritionistApp</string>
+    <string name="title_activity_saturday_underweight">saturdayUnderweight</string>
 </resources>
