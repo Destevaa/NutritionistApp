@@ -1,9 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activity_tuesday_underweight"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#FFB6C1"
+
     tools:context=".thursdayOverweight">
 
-</android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/someButton"
+        style="@style/buttonOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="thursday" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/someButton"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#f1f1f1">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breakfast"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of water with 2 tbsp of apple cider vinegar"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of soaked almonds"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mid-Morning Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 bowl of sprouts salad"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of skimmed milk"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lunch"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 servings of Missi rotis or palak brown rice"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 slices of mediterranean cheese"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 piece of banana"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Afternoon Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of ginger tea"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 serving of fruit salad (mixed with no cream)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of ginger tea"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dinner"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 bowl of green soup (with veggies)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 slices of whole wheat bread"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of avocado smoothie"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="After Dinner Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of skimmed milk"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 tbsp of turmeric"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+
+
+
+
+            </TableLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

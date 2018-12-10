@@ -1,9 +1,437 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activity_tuesday_underweight"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#FFB6C1"
+
     tools:context=".fridayNormalweight">
 
-</android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/someButton"
+        style="@style/buttonOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="friday" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/someButton"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#f1f1f1">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breakfast"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 8 weetbix with 3 scoops of protein powder(mixed with milk or chocolate shake)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 slice of banana and berries"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 chicken turkey sandwich with lettuce and tomato"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 tbsp of low fat mayo"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mid-Morning Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 slice of wheat bread and cheddar cheese"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of skimmed milk"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lunch"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 200 grams of baked fish or chicken"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 serving of mixed fruits (in can)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 large cooked sweet potato"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 5 cherry tomatoes"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Afternoon Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 bowl of mixed veggies"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of sweet corn"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dinner"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 fried egg"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 serving of wholemeal pasta with shredded chicken"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 slice of cheese"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 servings of wholemeal burger buns"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="After Dinner Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of full cream milk"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 tbsp of mixed nuts"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+
+
+            </TableLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

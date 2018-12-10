@@ -1,9 +1,430 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFB6C1"
     tools:context=".mondayUnderweight">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/someButton"
+        style="@style/buttonOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="monday" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/someButton"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#f1f1f1">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breakfast"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 1/2 Cups of Oatmeal (raw)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of Milk (skimmed)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1/2 cup Dried Cranberries (or raisins)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 tbsp Flaxseed Oil (cinnamon flavored flax oil works well with oatmeal too)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mid-Morning Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup of Milk (Skimmed)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 large piece of Fruit (with 1 tbsp natural peanut butter)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 stick Mozzarella Cheese (low-fat)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lunch"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 cups Egg Salad (on 2 whole-wheat pitas)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 piece Banana"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Afternoon Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup Yogurt (low-fat vanilla)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup Cottage Cheese (fat-free)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="► 1 cup Blueberries"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginHorizontal="1dp"/>
+
+
+
+            </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 2 tbsp Wheat Germ"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 tbsp Honey"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dinner"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 6 oz Salmon (grilled)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 large Sweet Potato"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 cup Green Beans"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 glass of Milk (Skimmed)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="After Dinner Snack"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="► 1 serving Protein Shake (peanut butter smoothie)"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginHorizontal="1dp"/>
+
+
+
+                </TableRow>
+
+
+
+
+
+            </TableLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

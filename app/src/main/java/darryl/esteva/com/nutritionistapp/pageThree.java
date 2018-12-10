@@ -3,6 +3,7 @@ package darryl.esteva.com.nutritionistapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,7 +42,42 @@ public class pageThree extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                calculateBMI();
+                if( TextUtils.isEmpty(feet.getText())){
+                    /**
+                     *   You can Toast a message here that the Username is Empty
+                     **/
+                    Toast.makeText(pageThree.this, "Feet is empty", Toast.LENGTH_LONG).show();
+
+                    feet.setError( "This field is required!" );
+
+                }
+
+                else if ( TextUtils.isEmpty(inches.getText())){
+                    /**
+                     *   You can Toast a message here that the Username is Empty
+                     **/
+                    Toast.makeText(pageThree.this, "inches is empty", Toast.LENGTH_LONG).show();
+
+                    inches.setError( "This field is required!" );
+
+                }
+
+                else if ( TextUtils.isEmpty(weight.getText())){
+                    /**
+                     *   You can Toast a message here that the Username is Empty
+                     **/
+                    Toast.makeText(pageThree.this, "Weight is empty", Toast.LENGTH_LONG).show();
+
+                    weight.setError( "This field is required!" );
+
+                }
+
+                else
+                {
+                    calculateBMI();
+                }
+
+
             }
         });
 

@@ -123,7 +123,7 @@ public class UserRegistration extends AppCompatActivity {
                                  **/
                                 Toast.makeText(UserRegistration.this, "Name is empty", Toast.LENGTH_LONG).show();
 
-                                editName.setError( "First name is required!" );
+                                editName.setError( "This field is required!" );
 
                             }
 
@@ -131,9 +131,9 @@ public class UserRegistration extends AppCompatActivity {
                                 /**
                                  *   You can Toast a message here that the Username is Empty
                                  **/
-                                Toast.makeText(UserRegistration.this, "Username is empty", Toast.LENGTH_LONG).show();
+                                Toast.makeText(UserRegistration.this, "Age is empty", Toast.LENGTH_LONG).show();
 
-                                editUsername.setError( "User name is required!" );
+                                editUsername.setError( "This field is required!" );
 
                             }
 
