@@ -15,12 +15,12 @@ public class UserRegistration extends AppCompatActivity {
 
     DatabaseHelper myDb;
     //EditText editName, editUsername,  editTextId;
-    EditText editName, editUsername, editBmi, editTextId, editTextBmiValue;
+    EditText editName, editUsername;
 
     Button btnAddData;
-    Button btnviewAll;
+   /* Button btnviewAll;
     Button btnviewUpdate;
-    Button btnDelete;
+    Button btnDelete;*/
 
 
 
@@ -38,26 +38,26 @@ public class UserRegistration extends AppCompatActivity {
 
         editName = (EditText)findViewById(R.id.editText_name);
         editUsername = (EditText)findViewById(R.id.editText_Username);
-        editBmi = (EditText)findViewById(R.id.editText_Bmi);
+        //editBmi = (EditText)findViewById(R.id.editText_Bmi);
         //editBmi = "N/A";
 
-        editTextId = (EditText)findViewById(R.id.editText_id);
+        //editTextId = (EditText)findViewById(R.id.editText_id);
         btnAddData = (Button)findViewById(R.id.editText_add);
-        btnviewAll = (Button)findViewById(R.id.button_viewAll);
-        btnviewUpdate = (Button)findViewById(R.id.button_update);
-        btnDelete = (Button)findViewById(R.id.button_delete);
+        //btnviewAll = (Button)findViewById(R.id.button_viewAll);
+        /*btnviewUpdate = (Button)findViewById(R.id.button_update);
+        btnDelete = (Button)findViewById(R.id.button_delete);*/
 
         AddData();
-        viewAll();
+        //viewAll();
         //updateData();
-        DeleteData();
+        //DeleteData();
 
 
 
 
     }
 
-    public void DeleteData(){
+    /*public void DeleteData(){
         btnDelete.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -76,7 +76,7 @@ public class UserRegistration extends AppCompatActivity {
                 }
 
         );
-    }
+    }*/
 
     /*public void updateData()
         {
@@ -153,7 +153,7 @@ public class UserRegistration extends AppCompatActivity {
                                 {
 
 
-                                    Toast.makeText(UserRegistration.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(UserRegistration.this, "User Registration Successful", Toast.LENGTH_LONG).show();
                                     //editTextBmiValue.setText(editBmi);
 
                                     pageRedirect(v);
@@ -167,7 +167,7 @@ public class UserRegistration extends AppCompatActivity {
 
                                 else
                                 {
-                                    Toast.makeText(UserRegistration.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(UserRegistration.this, "User Registration Failed", Toast.LENGTH_LONG).show();
                                 }
                             }
 
@@ -202,7 +202,7 @@ public class UserRegistration extends AppCompatActivity {
 
 
 
-    public void viewAll()
+    /*public void viewAll()
     {
         btnviewAll.setOnClickListener(
                 new View.OnClickListener()
@@ -245,5 +245,5 @@ public class UserRegistration extends AppCompatActivity {
         builder.setMessage(Message);
         builder.show();
 
-    }
+    }*/
 }

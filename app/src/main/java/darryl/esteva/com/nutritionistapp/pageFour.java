@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,8 +18,10 @@ public class pageFour extends AppCompatActivity {
     DatabaseHelper myDb;
 
 
-    TextView bmiTextView;
+    TextView bmiTextView, recommendTextView;
     Button forUnderweight, forNormalweight, forOverweight;
+    ImageView underweightImage, normalweightImage, overweightImage;
+
 
 
     @Override
@@ -28,9 +31,14 @@ public class pageFour extends AppCompatActivity {
 
         myDb = new DatabaseHelper(this);
         bmiTextView = (TextView) findViewById(R.id.bmiTextView);
+        recommendTextView = (TextView) findViewById(R.id.recTextView);
         forUnderweight = (Button)findViewById(R.id.underweightButton);
         forNormalweight = (Button)findViewById(R.id.normalweightButton);
         forOverweight = (Button)findViewById(R.id.overweightButton);
+
+        underweightImage =(ImageView)findViewById(R.id.underweightImage);
+        normalweightImage =(ImageView)findViewById(R.id.normalweightImage);
+        overweightImage =(ImageView)findViewById(R.id.overweightImage);
 
         showUserBMI();
 
@@ -66,51 +74,62 @@ public class pageFour extends AppCompatActivity {
                 //very severely underweight
                 if(Double.compare(bmiOutput, 15) <=0) {
                     forUnderweight.setVisibility(View.VISIBLE);
+                    underweightImage.setVisibility(View.VISIBLE);
                     bmiLabel = "Very Severely Underweight";
                 }
                 //severely underweight
                 else if(Double.compare(bmiOutput, 15) > 0 && Double.compare(bmiOutput, 16) <=0) {
                     forUnderweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "severely underweight";
+                    underweightImage.setVisibility(View.VISIBLE);
+                    bmiLabel = "Severely Underweight";
                 }
                 //underweight
                 else if(Double.compare(bmiOutput, 16) > 0 && Double.compare(bmiOutput, 18.5) <=0) {
                     forUnderweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "underweight";
+                    underweightImage.setVisibility(View.VISIBLE);
+                    bmiLabel = "Underweight";
                 }
 
                 //normal weight
                 else if(Double.compare(bmiOutput, 18.5) > 0  && Double.compare(bmiOutput, 25) <=0) {
                     forNormalweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "normal";
+                    normalweightImage.setVisibility(View.VISIBLE);
+                    bmiLabel = "Normal Weight";
                 }
 
                 else if(Double.compare(bmiOutput, 25) > 0 && Double.compare(bmiOutput, 30) <=0)
                 {
                     forOverweight.setVisibility(View.VISIBLE);
-                    bmiLabel = "overweight";
+                    overweightImage.setVisibility(View.VISIBLE);
+                    bmiLabel = "Overweight";
                 }
 
                 else if(Double.compare(bmiOutput, 30) > 0 && Double.compare(bmiOutput, 35) <=0)
                 {
                     forOverweight.setVisibility(View.VISIBLE);
+                    overweightImage.setVisibility(View.VISIBLE);
                     bmiLabel = "Obese I";
                 }
 
                 else if(Double.compare(bmiOutput, 35) > 0 && Double.compare(bmiOutput, 40) <=0)
                 {
                     forOverweight.setVisibility(View.VISIBLE);
+                    overweightImage.setVisibility(View.VISIBLE);
                     bmiLabel = "Obese II";
                 }
 
                 else
                 {
                     forOverweight.setVisibility(View.VISIBLE);
+                    overweightImage.setVisibility(View.VISIBLE);
                     bmiLabel = "Obese III";
                 }
 
 
-                bmiTextView.setText("YOUR BMI IS: " + bmiOutput + "\nYou are in the " + bmiLabel + " class");
+                bmiTextView.setText("Your BMI is " + bmiOutput + "\nYou are in the " + bmiLabel + " class");
+
+
+                recommendTextView.setText("Our Recommended Diet Plan for you is \nThe " + bmiLabel + " Diet Plan" );
             }
 
 

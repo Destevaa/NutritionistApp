@@ -88,7 +88,7 @@ public class pageThree extends AppCompatActivity {
 
             if(isUpdate == true)
             {
-                Toast.makeText(pageThree.this, "Data Updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(pageThree.this, "BMI Updated", Toast.LENGTH_LONG).show();
             }
             else
             {
