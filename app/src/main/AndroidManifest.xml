@@ -16,36 +16,193 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".pageTwo" />
-        <activity android:name=".pageThree" />
-        <activity android:name=".pageFour" />
+        <activity android:name=".pageTwo"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.MainActivity" />
+        </activity>
+
+        <activity android:name=".pageThree"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.pageTwo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.pageTwo" />
+        </activity>
+
+
+        <activity android:name=".pageFour"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.pageTwo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.pageTwo" />
+        </activity>
         <activity
             android:name=".UserRegistration"
             android:noHistory="true" />
-        <activity android:name=".underweightPlan" />
-        <activity android:name=".normalweightPlan" />
-        <activity android:name=".overweightPlan" />
-        <activity android:name=".mondayUnderweight" />
-        <activity android:name=".tuesdayUnderweight" />
-        <activity android:name=".wednesdayUnderweight" />
-        <activity android:name=".thursdayUnderweight" />
-        <activity android:name=".fridayUnderweight" />
-        <activity android:name=".sundayUnderweight" />
-        <activity android:name=".saturdayUnderweight" />
-        <activity android:name=".mondayOverweight" />
-        <activity android:name=".tuesdayOverweight" />
-        <activity android:name=".wednesdayOverweight" />
-        <activity android:name=".thursdayOverweight" />
-        <activity android:name=".fridayOverweight" />
-        <activity android:name=".saturdayOverweight" />
-        <activity android:name=".sundayOverweight" />
-        <activity android:name=".mondayNormalweight" />
-        <activity android:name=".tuesdayNormalweight" />
-        <activity android:name=".wednesdayNormalweight" />
-        <activity android:name=".thursdayNormalweight" />
-        <activity android:name=".fridayNormalweight" />
-        <activity android:name=".saturdayNormalweight" />
-        <activity android:name=".sundayNormalweight" />
+
+        <activity android:name=".underweightPlan"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.pageFour">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.pageFour" />
+        </activity>
+
+        <activity android:name=".normalweightPlan"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.pageFour">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.pageFour" />
+        </activity>
+
+        <activity android:name=".overweightPlan"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.pageFour">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.pageFour" />
+        </activity>
+
+
+        <activity android:name=".mondayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+        <activity android:name=".tuesdayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+        <activity android:name=".wednesdayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+        <activity android:name=".thursdayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+        <activity android:name=".fridayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+        <activity android:name=".sundayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+
+        <activity android:name=".saturdayUnderweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.underweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.underweightPlan" />
+        </activity>
+
+        <activity android:name=".mondayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+
+        <activity android:name=".tuesdayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+
+        <activity android:name=".wednesdayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+        <activity android:name=".thursdayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+
+        <activity android:name=".fridayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+
+        <activity android:name=".saturdayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+        <activity android:name=".sundayOverweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.overweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.overweightPlan" />
+        </activity>
+
+        <activity android:name=".mondayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".tuesdayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".wednesdayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".thursdayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".fridayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".saturdayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
+        <activity android:name=".sundayNormalweight"
+            android:parentActivityName="darryl.esteva.com.nutritionistapp.normalweightPlan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="darryl.esteva.com.nutritionistapp.normalweightPlan" />
+        </activity>
+
         <activity android:name=".aboutUs" />
         <activity android:name=".settings"></activity>
     </application>
