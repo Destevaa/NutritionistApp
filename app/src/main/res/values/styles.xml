@@ -15,6 +15,21 @@
         <item name="android:textColor">#fafafa</item>
     </style>
 
+
+    <style name="buttonTwo">
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:text">NEXT</item>
+        <item name="android:textColor">#fafafa</item>
+
+    </style>
+
+    <style name="buttonThree">
+        <item name="android:background">@drawable/green_button</item>
+        <item name="android:text">NEXT</item>
+        <item name="android:textColor">#fafafa</item>
+
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -45,7 +45,9 @@
         <activity android:name=".thursdayNormalweight" />
         <activity android:name=".fridayNormalweight" />
         <activity android:name=".saturdayNormalweight" />
-        <activity android:name=".sundayNormalweight"></activity>
+        <activity android:name=".sundayNormalweight" />
+        <activity android:name=".aboutUs" />
+        <activity android:name=".settings"></activity>
     </application>
 
 </manifest>

@@ -28,6 +28,49 @@ public class pageTwo extends AppCompatActivity {
         myDb = new DatabaseHelper(this);
     }
 
+
+    public void goToHome(View v)
+    {
+        //Original Code
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.homeImageButton)
+        {
+            i = new Intent(this,pageTwo.class);
+            startActivity(i);
+        }
+    }
+
+    public void goToAbout(View v)
+    {
+        //Original Code
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.aboutImageButton)
+        {
+            i = new Intent(this,aboutUs.class);
+            startActivity(i);
+        }
+    }
+
+    public void goToSettings(View v)
+    {
+        //Original Code
+        Intent i = null;
+        Intent chooser = null;
+
+        //passing into another page
+        if(v.getId()==R.id.settingsImageButton)
+        {
+            i = new Intent(this,settings.class);
+            startActivity(i);
+        }
+    }
+
     
 
     public void page3(View v)

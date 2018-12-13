@@ -5,13 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:id="@+id/activity_tuesday_underweight"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     android:background="#FFB6C1"
+
     tools:context=".mondayUnderweight">
 
     <Button
         android:id="@+id/someButton"
-        style="@style/buttonOne"
+        style="@style/buttonTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="monday" />
@@ -420,11 +425,19 @@
             </TableLayout>
 
 
+
+
+
+
         </RelativeLayout>
 
 
 
+
+
     </ScrollView>
+
+
 
 
 </RelativeLayout>
